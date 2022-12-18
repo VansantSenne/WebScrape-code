@@ -1,0 +1,167 @@
+
+using Newtonsoft.Json;
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
+using System;
+using System.Collections.Generic;
+using System.Formats.Asn1;
+using System.Globalization;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+
+
+
+namespace WebScraperCase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int getal;
+            Console.WriteLine("Write 1,2 or 3");
+            getal = Convert.ToInt32(Console.ReadLine());
+            if (getal == 1)
+            {
+                WebDriver driver = new ChromeDriver();
+                String woord;
+                Console.WriteLine();
+                woord = Console.ReadLine();
+                driver.Navigate().GoToUrl("https://www.flashscore.nl/darts/");
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//*[@id=\"onetrust-accept-btn-handler\"]")).Click();
+                Thread.Sleep(1000);
+                var search = driver.FindElement(By.ClassName("search"));
+                search.Click();
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//*[@id=\"search-window\"]/div/div/div[2]/div/button")).Click();
+                Thread.Sleep(1500);
+                driver.FindElement(By.CssSelector("#search-window > div > div > div.searchInput > div > ul > li:nth-child(13) > button")).Click();
+                Thread.Sleep(1000);
+                var send = driver.FindElement(By.XPath("//*[@id=\"search-window\"]/div/div/div[2]/input"));
+                send.SendKeys(woord);
+                Thread.Sleep(1000);
+                driver.FindElement(By.XPath("//*[@id=\"search-window\"]/div/div/div[3]/div/a[1]/div[2]")).Click();
+                Thread.Sleep(1000);
+                driver.FindElement(By.XPath("//*[@id=\"li1\"]")).Click();
+                Thread.Sleep(2000);
+                var player1 = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div/div/main/div[4]/div[2]/div[1]/div[1]/div/div/div[4]/div[2]"));
+                var player2 = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div/div/main/div[4]/div[2]/div[1]/div[1]/div/div/div[4]/div[3]"));
+                var score1 = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div/div/main/div[4]/div[2]/div[1]/div[1]/div/div/div[4]/div[4]"));
+                var score2 = driver.FindElement(By.XPath("/html/body/div[4]/div[1]/div/div/main/div[4]/div[2]/div[1]/div[1]/div/div/div[4]/div[5]"));
+                
+                var uitslag = new List<Wedstrijd> { };
+                using (TextWriter writer = new StreamWriter("C:\\Users\\Vansant Senne\\Documents\\devops\\darts.csv"))
+                {
+                    writer.WriteLine("{0},{1},{2}", "Winnaar", "Verliezer", "Score");
+                    if (player1.GetAttribute("class") == "event__participant event__participant--home fontExtraBold")
+                    {
+                        Console.WriteLine(player1.Text);
+                        Console.WriteLine(player2.Text);
+                        String result = (score1.Text + "-" + score2.Text);
+                        uitslag.Add(new Wedstrijd { winnaar = player1.Text, verliezer = player2.Text, score = result });
+
+                        writer.WriteLine("{0},{1},{2}", player2.Text, player1.Text, result);
+
+                    }
+                    else
+                    {
+                        Console.WriteLine(player2.Text);
+                        Console.WriteLine(player1.Text);
+                        String result = (score2.Text + "-" + score1.Text);
+                        uitslag.Add(new Wedstrijd { winnaar = player2.Text, verliezer = player1.Text, score = result });
+                        writer.WriteLine("{0},{1},{2}", player2.Text, player1.Text, result);
+
+                    }
+                }
+                String json = JsonConvert.SerializeObject(uitslag);
+                File.WriteAllText(@"C:\Users\Vansant Senne\Documents\devops\darts.json", json.ToString());
+            }
+            else if (getal == 2)
+        {
+                WebDriver driver = new ChromeDriver();
+                String woord2;
+                Console.WriteLine();
+                woord2 = Console.ReadLine();
+                var url = "https://www.ictjob.be/nl/it-vacatures-zoeken?keywords=" + woord2;
+                driver.Navigate().GoToUrl(url);
+                Thread.Sleep(7000);
+                driver.FindElement(By.XPath("//*[@id=\"sort-by-date\"]")).Click();
+                Thread.Sleep(10000);
+                var titles = driver.FindElements(By.XPath("//*[@id=\"search-result-body\"]/div/ul/li/span[2]/a/h2"));
+                var companies = driver.FindElements(By.XPath("//*[@id=\"search-result-body\"]/div/ul/li/span[2]/span[1]"));
+                var locations = driver.FindElements(By.XPath("//*[@id=\"search-result-body\"]/div/ul/li/span[2]/span[2]/span[2]/span/span"));
+                var keywords = driver.FindElements(By.XPath("//*[@id=\"search-result-body\"]/div/ul/li/span[2]/span[3]"));
+                var job = new List<Job> { };
+                using (TextWriter writer = new StreamWriter("C:\\Users\\Vansant Senne\\Documents\\devops\\jobs.csv"))
+                {
+                    writer.WriteLine("{0},{1},{2},{3},{4}", "Title", "Company", "Location","Keyword","URL");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        var link = "https://www.ictjob.be/nl/vacature/" + titles[i].Text + "/2-166914 ";
+                        Console.WriteLine(" " + "Title: " + titles[i].Text + ",\n Company: " + companies[i].Text + ",\n Location: " + locations[i].Text + ",\n Keywords: " + keywords[i].Text + ",\n URL: " + link);
+                        job.Add(new Job { Title = titles[i].Text, Company = companies[i].Text, Location = locations[i].Text, Keyword = keywords[i].Text, Link = link });
+                        writer.WriteLine("{0},{1},{2},{3},{4}", titles[i].Text, companies[i].Text, locations[i].Text, keywords[i].Text, link);
+                    }
+                }
+                String json2 = JsonConvert.SerializeObject(job);
+                File.WriteAllText(@"C:\Users\Vansant Senne\Documents\devops\job.json", json2.ToString());
+
+            }
+            else
+            {
+                String woord3;
+                WebDriver driver = new ChromeDriver();
+                Console.WriteLine();
+                woord3 = Console.ReadLine();
+                var url = "https://www.youtube.com/results?search_query=" + woord3 + "&sp=CAI%253D";
+                driver.Navigate().GoToUrl(url);
+                Thread.Sleep(2000);
+                driver.FindElement(By.XPath("//*[@id=\"content\"]/div[2]/div[6]/div[1]/ytd-button-renderer[2]/yt-button-shape/button/yt-touch-feedback-shape/div/div[2]")).Click();
+                Thread.Sleep(3000);
+                var title = driver.FindElements(By.XPath("//*[@id=\"video-title\"]"));
+                var author = driver.FindElements(By.XPath("/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div[2]/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer/div[1]/div/div[2]/ytd-channel-name/div/div/yt-formatted-string/a"));
+                var views = driver.FindElements(By.XPath("//*[@id=\"metadata-line\"]/span[1]"));
+                var yt = new List<Youtube> { };
+                using (TextWriter writer = new StreamWriter("C:\\Users\\Vansant Senne\\Documents\\devops\\youtube.csv"))
+                {
+                    writer.WriteLine("{0},{1},{2},{3}", "Title", "Channel name", "Views", "URL");
+                    for (int i = 0; i < 5; i++)
+                    {
+                        Console.WriteLine(" " + "Link: " + url + ",\n Title:" + title[i].Text + ",\n Author:" + author[i].Text + ",\n Views: " + views[i].Text);
+                        yt.Add(new Youtube { Title1 = title[i].Text, Author = author[i].Text, Views = views[i].Text, URL = url });
+                        writer.WriteLine("{0},{1},{2},{3}",  title[i].Text, author[i].Text, views[i].Text, url);
+                    }
+                }
+
+                String json3 = JsonConvert.SerializeObject(yt);
+                File.WriteAllText(@"C:\Users\Vansant Senne\Documents\devops\youtube.json", json3.ToString());
+            }
+        }
+    }  
+    public class Wedstrijd
+    {
+        public String winnaar { get; set; }
+        public String verliezer { get; set; }
+        public String score { get; set; }
+    }
+    public class Job
+    {
+        public String Title { get; set; }
+        public String Location { get; set; }
+        public String Keyword { get; set; }
+        public String Company { get; set; }
+        public String Link { get; set; }
+    }
+    public class Youtube
+    {
+        public String Title1 { get; set; }
+        public String URL { get; set; }
+        public String Author { get; set; }
+        public String Views { get; set; }
+    }
+}
