@@ -1,0 +1,28 @@
+Maandag:
+
+Inlichting stage project
+Nodige installaties op laptop gedaan
+Datamodel opgesteld
+Back-en front end van vorige stagiairs opgesteld
+
+Dinsdag:
+
+Project opgesteld(backend)
+De nodige lagen binnen het project voorzien
+Dependency injection
+poging tot eerste create van een certificaat(niet helemaal af geraakt)
+
+Woensdag voormiddag:
+
+Toevoegen certificaat afgewerkt
+Namiddag jobbeurs
+
+Donderdag:
+
+Update,Get all, Get(id) en delete voor certificaat aangemaakt
+Begonnen aan genereren van certificaat door samenvoegen van .Crt en .Key bestanden
+
+Vrijdag:
+
+Generen certificaat afgewerkt
+
