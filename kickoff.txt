@@ -1,0 +1,24 @@
+project plan:  
+
+Certificaten beheer applicatie maken, meer bepaald een platform aan te bieden voor lokale besturen waar zij hun certificaten 
+efficient kunnen beheren. de applicatie stelt deze besturen in staat om een crt bestand en key bestand te uploaden waarna ons systeem 
+automatisch een volledig certificaat zal genereren in de vorm van een pfx bestand.
+
+dit bestand zal het ingevoerde certificaat en sleutelbestand combineren tot een veilig enkel bestand dat gemakkelijk geïmporteerd en gebruikt kan worden
+voor bijvoorbeeld het beveiligen van communicatie.
+
+gebruikers van deze applicatie, de lokale besturen dus kunnen deze certificaten dan bekijken en opvragen via een gebruiksvriendelijke interface.
+
+De certificaten zelf worden veilig bewaard op de servers van remmicom zelf om integriteit te garanderen.
+
+technische aspect, plan van aanpak:
+
+- stap voor stap
+- vorig jaar ook, aan mij om het concept te proberen verbeteren met project van vorig jaar ter referentie, maar wel lichtjes aangepast aangezien ze vorig met 2 waren en ik nu alleen voor deze opdracht sta.
+- applicatie zal angular voor front end gebruiken en .net als backend 
+- eerst basis versie voorzien en later uitbreiden
+
+huidige stand van zaken
+
+- Momenteel is de backend voor certificaten te genereren opgezet en ben ik bezig de front end hiervoor in orde te maken.
+
