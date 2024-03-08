@@ -1,0 +1,35 @@
+Maandag:
+
+- Laatste comments van pullrequest verwerkt
+- Opzetten angular structuur, nodige installaties doen
+- Connectie leggen tussen angular en .NET backend
+- Eerste components aangemaakt en structuur proberen te begrijpen
+
+Dinsdag:
+
+- Prototypes aanmaken
+- Grid uit demo project implementeren
+- Certificaten overview maken
+- Pipeline en template voor doelDescription en datums in de grid gemaakt
+
+Woensdag:
+
+- Packages voor navigation/layout implementeren(redelijk veel problemen mee gehad)
+- Pullrequest gemaakt voor opzet frontend
+- Comments op deze pullrequest resolven
+- Begonnen met certificaat aanmaken via frontend
+
+Donderdag:
+
+- Nieuwe structuur om met reactive forms te werken aangeleerd
+- Certificaten overview component opgedeeld in smart component en dumb components
+- Kendo dialog voor form aanmaken certificaat in orde gebracht
+- Kick-off meeting
+
+Vrijdag:
+
+- Certificaat toevoegen afgewerkt
+- Form validatie toegevoegd
+- Form field package van remmicom geïmplementeerd
+- Begonnen aan serverside pagination
+- Problemen met implementeren van notificationservice package van remmicom zelf(niet opgelost geraakt)
