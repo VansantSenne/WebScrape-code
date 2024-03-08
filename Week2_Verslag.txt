@@ -33,3 +33,5 @@ Vrijdag:
 - Form field package van remmicom geïmplementeerd
 - Begonnen aan serverside pagination
 - Problemen met implementeren van notificationservice package van remmicom zelf(niet opgelost geraakt)
+- Retrospective meeting
+- Sprint review
