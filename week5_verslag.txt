@@ -1,0 +1,36 @@
+Maandag:
+
+Multiselect afwerken
+Formcontrol => array van numbers voor multiselect
+In backend type int naar int[] omvormen
+Omvormen van Post CertificaatServerHandler:
+  Checken welke serverId's in de request zitten en niet in de db => aanmaken/toevoegen
+  Checken welke er niet in de request zitten en wel in de db => verwijderen
+Extra dto hiervoor maken om als requestparameter mee te geven
+Pullrequest gemaakt
+
+Dinsdag:
+
+Comments oplossen
+Result pattern implementeren op alle handlers/ in controllers
+Search functionaliteit implementeren in backend voor klanten
+Search functionaliteit implementeren in frontend voor klanten(WIP)
+Bug voor infinite scroll op groot scherm(verplaatst naar latere datum, geen prioriteit)
+
+Woensdag:
+
+Search frontend klanten afgewerkt
+Search certificaten 
+Research best logging framework voor dot net(WIP)
+
+Donderdag:
+
+Research/ analyse logging framework
+Beide Nlog en Serilog in kopie van project integreren om bevindingen op te doen
+Analyse document opstellen
+Meeting met the klant
+Beginnen aan implementeren logging framework(Serilog)
+
+Vrijdag:
+
+Logging framework verder implementeren
