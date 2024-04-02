@@ -34,3 +34,4 @@ Beginnen aan implementeren logging framework(Serilog)
 Vrijdag:
 
 Logging framework verder implementeren
+Pipelines opstellen
