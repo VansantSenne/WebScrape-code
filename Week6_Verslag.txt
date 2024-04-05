@@ -1,0 +1,29 @@
+Dinsdag:
+
+Pullrequest => comments resolven
+CreatieDatum toevoegen in CertificaatServers en certificaten
+Entity framework hook toegevoegd voor het automatisch assignen van now bij creatieDatum
+Begonnen aan getCertificatenBydateRange
+
+Woensdag:
+
+GetCertificatenByDateRange afwerken
+Ook in frontend toegevoegd
+Extensionmethod geleerd
+
+
+Donderdag:
+
+Deployment op appserver-dev en testserver regelen
+iis juist instellen
+GetServerIdByCustomerReportingcode endpoint in klantenapi
+Getbydaterange aangepast zodat dit ook de reporting code gebruikt
+Http Client genereren via openapi generator(WIP, eerst research doen naar beste library hiervoor)
+
+Vrijdag: 
+
+http client generen met nswag
+client implementeren
+Juiste certificaten op localhost plaatsen
+Endpoint uit klantenapi met api key aanroepen
+beginnen aan opzetten certificaten api
