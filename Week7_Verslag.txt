@@ -1,0 +1,37 @@
+Maandag : 
+CertificatenAPI opgezet
+Database hiervoor ingericht
+Twee endpoints (GetCertificaatById en GetCertificatenByDoel) opgezet
+Client tussen beheer en certificatenAPI gemaakt
+PostCertificaten in certificatenapi met getbydaterange als input
+
+Dinsdag :
+Sprint planning
+Review vorige sprint met demo voorstelling voor pm's
+Bug(nswag genereerde doel enum niet correct)
+	=> in backend
+	=> jsonenumconverter weggehaald
+	=> handmatig x-enum-varnames toegevoegd en dit werkte
+	=> later met schemafilter class ervoor gezorgd dat alle enums binnen openapi spec de variable x-enum-varnames
+	dynamisch toegewezen krijgen
+	=> Frontend ook aangepast
+
+Woensdag:
+Comments resolven
+WindowsService implementeren
+Client + openapispec voor gewone api genereren
+Synchroniseer Certificaten job toevoegen die elke dag zal checken of er nieuwe certificaten op de server geplaatst zijn en deze dan gaat ophalen
+Met Quartz leren werken
+
+Donderdag:
+Logging in windowsservice fixen
+Reportingcode dynamisch uit appsettings halen via DI
+Synchronisatie tabel aangemaakt
+Post aangepast zodat deze de synchronisatiedatum aanpast
+Browser aan pipeline toegevoegd
+
+Vrijdag:
+Uitbreiden database
+backend hiervoor in orde brengen(WIP)
+Application urls en namespaces voor deployment in orde gebracht
+web config in angular toegevoegd
