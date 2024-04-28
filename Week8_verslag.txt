@@ -1,0 +1,7 @@
+Maandag:
+Statussen voor certificaten toevoegen in de backend(automatisch statussen toewijzen naar gelang de vordering in creatie cert)
+Extra klanten tabel met metadata aanmaken in beheer api
+dto's voorzien
+Gegevens van klantenapi gaan combineren in gemeenschappelijke dto in beheer api om zo metadata toe te voegen
+Update, get en posts aanpassen met nieuwe toevoegingen
+Applicatie fiche opstellen voor deployment met bijhorend netwerkschema
