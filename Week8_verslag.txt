@@ -5,3 +5,29 @@ dto's voorzien
 Gegevens van klantenapi gaan combineren in gemeenschappelijke dto in beheer api om zo metadata toe te voegen
 Update, get en posts aanpassen met nieuwe toevoegingen
 Applicatie fiche opstellen voor deployment met bijhorend netwerkschema
+
+Dinsdag:
+Beginnen aan beheer functies updaten in frontend
+Enumoptions generator gemaakt
+Comments op pullrequest oplossen
+statussen waren niet goed, werden overwritten(besloten dit even er uit te halen)
+
+Woensdag:
+Create aanpassen met status
+Update afgewerkt
+Gezorgd dat wnneer er geen crt in update wordt meegegeven, de oude gewoon blijft staan
+Begonnen aan uitbreiden ofverzichten in frontend
+
+Donderdag:
+Comments op pullrequest oplossen
+Uitbreiden overzichten afwerken
+Analyse onderscheid maken tussen productie en test voor remmicom servers
+	=> onderzoeken hoe dit best te visualiseren
+
+Vrijdag:
+Analyse verderzetten
+Review meeting
+en retrospective
+Beginnen aan analyse implementeren(WIP)
+
+
