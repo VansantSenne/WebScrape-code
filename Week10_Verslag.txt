@@ -1,0 +1,35 @@
+Maandag:
+Verder sukkelen met het correct tonen van certificaten(multiselect is al ingevuld)
+Uiteindelijk gelukt, maar moet nadenken over versimpelen van component(deel van logica uit frontend naar backend verplaatsten, extra endpointjes om van ingewikkelde mapping en forkjoins af te geraken)
+Servers pagineren en filterbaar maken in backend
+KlantenApi volledig uit frontend wegwerken(WIP)
+
+Dinsdag:
+Endpoints in beheerapi toevoegen/uitbreiden om frontend logica te vereenvoudigen
+Meer dan 100 lijnen code uit frontend kunnen halen
+Server grid opgesteld
+paginering toch niet gedaan
+Getcertificatenbyservers endpoint aangemaakt
+
+Woensdag:
+1 mei => verlof
+
+Donderdag:
+Certificaten per server als expandable detail pane in grid toegevoegd
+=> omgevormd naar map om load te verminderen
+Serverdeploytype aan db backend klantenapi toevoegen
+Na anderhalve week dan toch eindelijk analyse geimplementeerd gekregen
+Pullrequest gemaakt
+
+
+Vrijdag:
+Heel de voormiddag comments opgelost
+Klantenapi volledig uit frontend gehaald
+Applicatie met sql scripts in gebruikersbeheer aanmaken
+Beheerder en lezersprofiel in applicatie aanmaken
+Document voor idp doornemen
+
+
+
+
+
