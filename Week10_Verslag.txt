@@ -19,6 +19,7 @@ Certificaten per server als expandable detail pane in grid toegevoegd
 => omgevormd naar map om load te verminderen
 Serverdeploytype aan db backend klantenapi toevoegen
 Na anderhalve week dan toch eindelijk analyse geimplementeerd gekregen
+IsTest kolom aan klantentabel in eigen database toevoegen
 Pullrequest gemaakt
 
 
