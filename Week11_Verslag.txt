@@ -1,0 +1,29 @@
+Maandag:
+
+Clients aangemaakt in identityserver
+Identity server configureren en aanspreken vanuit backend
+Jwt bearer token handlen in backend
+Authorisatie en authenticatie en  aan beheer api calls toegevoegd
+swagger hiervoor configureren
+Dit ook voor certificaten api doen (WIP)
+
+Dinsdag:
+Toegang voor certificatenApi gefixt
+pullrequest
+Build faalt in pipeline, uitzoeken waarom (was omdat item op niet debug level niet de juiste using gebruikte, kwam dus geen error in build aangezien dit op debug level is)
+Nog maar eens een enum naar string conversie geprobeerd in nswag dat nu eindelijk fatsoenlijk werkt, met een schema filter gedaan
+
+Woensdag:
+Toegang vanuit frontend regelen
+Remmicom authentication package implementeren
+Redirect url, clientId en alle andere benodigdheden instellen
+Authmodule in appconfig configureren
+App.component juist zetten
+Interceptor voor api calls maken
+
+Donderdag:
+Verlof
+
+Vrijdag:
+Readonly/beheer schermen in frontend in orde brengen
+Beginne remmicom package voor authenticatie er uit te werken(WIP)
