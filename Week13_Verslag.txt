@@ -1,0 +1,19 @@
+Maandag:
+Verlof
+
+Dinsdag:
+van error naar error toewerken tot uiteindelijk eerste test gelukt is
+testen schrijven (+-5 tests geschreven)
+
+Woensdag:
+Heel de dag testen schrijven (+-22 testen geschreven)
+
+Donderdag:
+Testen schrijven afwerken(uiteindelijk 39 testen geworden)
+Pullrequest gemaakt
+Documentatie begonnen
+
+Vrijdag:
+Comments op pullrequest verwerkt
+Documentatie afwerken
+Evaluatie bijwonen
